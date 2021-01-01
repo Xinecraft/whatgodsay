@@ -71,6 +71,11 @@ class App extends React.Component<{}, MyState> {
     };
   }
 
+  askXinecraft() {
+    alert("Just STFU! and visit my github.")
+    // window.location.href = 'http://github.com/xinecraft'
+  }
+
   render() {
     let bibleResult = null
     if (this.state.bibleResult && this.state.bibleResult.rows) {
@@ -89,7 +94,18 @@ class App extends React.Component<{}, MyState> {
     return (
       <div>
         <div className="flex flex-col items-center">
-          <h1 className="text-9xl h-full p-10 text-green-500">What God Say</h1>
+          <h1 className="text-8xl h-full p-10 font-bhs">
+            <span className="text-blue-500">W</span>
+            <span className="text-red-500">h</span>
+            <span className="text-yellow-500">a</span>
+            <span className="text-blue-500">t</span>
+            <span className="text-green-500">G</span>
+            <span className="text-red-500">o</span>
+            <span className="text-blue-500">d</span>
+            <span className="text-red-500">S</span>
+            <span className="text-yellow-500">a</span>
+            <span className="text-blue-500">y</span>
+            </h1>
           <input
             onChange={this.handleSearchChange.bind(this)}
             onKeyUp={this.handleEnterKeyPress.bind(this)}
@@ -98,17 +114,26 @@ class App extends React.Component<{}, MyState> {
             autoComplete="off"
           />
 
+          <div className="flex">
           <button
             onClick={this.searchForTerm.bind(this)}
-            className="bg-blue-400 mt-2 hover:bg-blue-300 rounded text-white p-2 px-6"
+            className="bg-blue-400 mt-2 hover:bg-blue-300 rounded text-white p-2 px-6 mr-2 focus:outline-none active:bg-blue-500"
           >
-            <p className="font-semibold text-lg">Ask Gods Now</p>
+            <p className="font-semibold text-lg">Ask Gods</p>
           </button>
+          <button
+            onClick={this.askXinecraft.bind(this)}
+            className="bg-gray-200 mt-2 hover:bg-gray-100 rounded text-gray-700 p-2 px-6 focus:outline-none active:bg-gray-300"
+          >
+            <p className="font-semibold text-lg">Ask Xinecraft</p>
+          </button>
+          </div>
+
         </div>
 
         <div className="flex justify-around mt-5">
           <div className="h-full w-full border">
-            <h3 className="text-center text-2xl text-blue-500 font-semibold">
+            <h3 className="text-center text-2xl text-blue-500 font-bhs mt-3">
               Bible {this.state.bibleResult?.totalCount}
             </h3>
             <ul className="list-disc leading-5 p-7">
@@ -117,7 +142,7 @@ class App extends React.Component<{}, MyState> {
           </div>
 
           <div className="h-full w-full border">
-            <h3 className="text-center text-2xl text-green-500 font-semibold">
+            <h3 className="text-center text-2xl text-green-500 font-bhs mt-3">
               Quran {this.state.quranResult?.totalCount}
             </h3>
             <ul className="list-disc leading-5 p-7">
