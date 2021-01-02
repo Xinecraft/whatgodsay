@@ -176,7 +176,7 @@ class App extends React.Component<{}, MyState> {
         </div>
 
         <div className="flex flex-col items-center">
-          <h1 className="text-8xl h-full p-10 font-bhs">
+          <h1 className="text-5xl md:text-8xl h-full p-10 font-bhs">
             <span className="text-blue-500">W</span>
             <span className="text-red-500">h</span>
             <span className="text-yellow-500">a</span>
@@ -238,7 +238,7 @@ class App extends React.Component<{}, MyState> {
         </div>
 
         <div className="flex justify-around mt-5">
-          <div className="h-full w-full border">
+          <div className="h-full w-1/2 border">
             <h3 className="text-center text-2xl text-blue-500 font-bhs mt-3">
               Bible {this.state.bibleResult?.totalCount}
             </h3>
@@ -247,7 +247,7 @@ class App extends React.Component<{}, MyState> {
             {!this.state.isLoading && <ol className="list-disc leading-5 p-7 space-y-4">{bibleResult}</ol>}
           </div>
 
-          <div className="h-full w-full border">
+          <div className="h-full w-1/2 border">
             <h3 className="text-center text-2xl text-green-500 font-bhs mt-3">
               Quran {this.state.quranResult?.totalCount}
             </h3>
