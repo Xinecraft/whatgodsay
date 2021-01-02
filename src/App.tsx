@@ -54,10 +54,13 @@ class App extends React.Component<{}, MyState> {
       { headers: { "api-key": "a4571052d462e077d71ad25ef7186484" } }
     );
     const bibleResult = bibleResultAxios.data.data;
-    const rows = bibleResult.verses;
-    rows.length = 100;
+    let rows = []
+    if (bibleResult) {
+      rows = bibleResult.verses;
+    }
+    rows.length = 25;
     return {
-      totalCount: bibleResult.total,
+      totalCount: bibleResult ? bibleResult.total : 0,
       rows: rows,
     };
   }
@@ -67,10 +70,13 @@ class App extends React.Component<{}, MyState> {
       `https://api.alquran.cloud/v1/search/${this.state.searchTerm}/all/en?limit=10`
     );
     const quranResult = quranResultAxios.data.data;
-    const rows = quranResult.matches;
-    rows.length = 100;
+    let rows = []
+    if (quranResult && quranResult.matches) {
+      rows = quranResult.matches;
+    }
+    rows.length = 25;
     return {
-      totalCount: quranResult.count,
+      totalCount: quranResult? quranResult.count : 0,
       rows: rows,
     };
   }
