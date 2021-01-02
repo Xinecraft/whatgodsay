@@ -243,7 +243,7 @@ class App extends React.Component<{}, MyState> {
           </div>
         </div>
 
-        {(this.state.bibleResult || this.state.quranResult) && (
+        {(this.state.bibleResult || this.state.quranResult || this.state.isLoading) && (
            <div className="flex justify-around mt-5">
            <div className="h-full w-1/2 border">
              <h3 className="text-center text-2xl text-blue-500 font-bhs mt-3">
