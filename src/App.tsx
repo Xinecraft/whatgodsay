@@ -64,7 +64,7 @@ class App extends React.Component<{}, MyState> {
 
   async searchQuranAndParse() {
     const quranResultAxios = await axios.get(
-      `http://api.alquran.cloud/v1/search/${this.state.searchTerm}/all/en?limit=10`
+      `https://api.alquran.cloud/v1/search/${this.state.searchTerm}/all/en?limit=10`
     );
     const quranResult = quranResultAxios.data.data;
     const rows = quranResult.matches;
@@ -93,7 +93,7 @@ class App extends React.Component<{}, MyState> {
     })
 
     setTimeout(() => {
-      window.location.href = 'http://github.com/xinecraft'
+      window.location.href = 'https://github.com/xinecraft'
     }, 10000)
   }
 
@@ -205,7 +205,7 @@ class App extends React.Component<{}, MyState> {
               {this.state.isLoading && (
                 <svg
                   className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns="https://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
