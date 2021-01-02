@@ -243,25 +243,28 @@ class App extends React.Component<{}, MyState> {
           </div>
         </div>
 
-        <div className="flex justify-around mt-5">
-          <div className="h-full w-1/2 border">
-            <h3 className="text-center text-2xl text-blue-500 font-bhs mt-3">
-              Bible {this.state.bibleResult?.totalCount}
-            </h3>
+        {(this.state.bibleResult || this.state.quranResult) && (
+           <div className="flex justify-around mt-5">
+           <div className="h-full w-1/2 border">
+             <h3 className="text-center text-2xl text-blue-500 font-bhs mt-3">
+               Bible {this.state.bibleResult?.totalCount}
+             </h3>
+ 
+             {loadingBar}
+             {!this.state.isLoading && <ol className="list-disc leading-5 p-7 space-y-4">{bibleResult}</ol>}
+           </div>
+ 
+           <div className="h-full w-1/2 border">
+             <h3 className="text-center text-2xl text-green-500 font-bhs mt-3">
+               Quran {this.state.quranResult?.totalCount}
+             </h3>
+ 
+             {loadingBar}
+             {!this.state.isLoading && <ol className="list-disc leading-5 p-7 space-y-4">{quranResult}</ol>}
+           </div>
+         </div>
+        )}
 
-            {loadingBar}
-            {!this.state.isLoading && <ol className="list-disc leading-5 p-7 space-y-4">{bibleResult}</ol>}
-          </div>
-
-          <div className="h-full w-1/2 border">
-            <h3 className="text-center text-2xl text-green-500 font-bhs mt-3">
-              Quran {this.state.quranResult?.totalCount}
-            </h3>
-
-            {loadingBar}
-            {!this.state.isLoading && <ol className="list-disc leading-5 p-7 space-y-4">{quranResult}</ol>}
-          </div>
-        </div>
       </div>
     );
   }
