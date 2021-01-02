@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# WhatGodSay - Learning React with Fun 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Learning to make API calls with React by making use of Scriptures API.
+This Searches various Scriptures for Keywords and show them side by side.
+
+Used:  React Typescript and Tailwind
+
+### Feature ToDo ✓
+- [x] Add Bible
+- [x] Add Quran
+- [ ] Add Bhagwat Geeta
+- [ ] Add Guru Granth Sahib
+- [ ] Add some non religious mythical scriptures.
 
 ## Available Scripts
 
