@@ -176,7 +176,7 @@ class App extends React.Component<{}, MyState> {
         </div>
 
         <div className="flex flex-col items-center">
-          <h1 className="text-5xl md:text-8xl h-full p-10 font-bhs">
+          <h1 className="text-4xl md:text-8xl h-full p-10 font-bhs">
             <span className="text-blue-500">W</span>
             <span className="text-red-500">h</span>
             <span className="text-yellow-500">a</span>
@@ -215,7 +215,7 @@ class App extends React.Component<{}, MyState> {
                     cy="12"
                     r="10"
                     stroke="currentColor"
-                    stroke-width="4"
+                    strokeWidth="4"
                   ></circle>
                   <path
                     className="opacity-75"
