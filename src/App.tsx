@@ -198,8 +198,9 @@ class App extends React.Component<{}, MyState> {
             onChange={this.handleSearchChange.bind(this)}
             onKeyUp={this.handleEnterKeyPress.bind(this)}
             type="search"
-            className="border border-gray-300 rounded w-2/4 px-5 py-3 outline-none hover:shadow-md"
+            className="border border-gray-300 rounded w-3/4 md:w-2/4 px-5 py-3 outline-none hover:shadow-md"
             autoComplete="off"
+			placeholder="Search for Keyword..."
           />
 
           <div className="flex">
